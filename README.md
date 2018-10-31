@@ -15,7 +15,7 @@ module "service_account_for_cloud_sql" {
 }
 ```
 
-if you need to create a Kubernetes Secret you can do it as follows: 
+if you need to create a Kubernetes Secret you can use the 'decoded_private_key' output as follows (note that you need to configure the 'kubernetes' provider): 
 
 ```ruby
 provider "kubernetes" {

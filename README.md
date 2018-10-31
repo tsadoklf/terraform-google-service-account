@@ -34,3 +34,22 @@ resource "kubernetes_secret" "cloudsql-instance-credentials" {
 }
 
 ```
+
+## Inputs
+
+| Name                  | Description                                              |  Type  | Default | Required |
+|:----------------------|:---------------------------------------------------------|:------:|:-------:|:--------:|
+| `account_id`          | The service account ID.                                  | string |    -    |   yes    |
+| `display_name`        | The display name for the service account.                | string |   ``    |   no     |
+| `roles`               | The roles that will be granted.                          | list   |    -    |   no     |
+
+## Outputs
+
+| Name                  | Description                                              |
+|:----------------------|:---------------------------------------------------------|
+| `email`               | The e-mail address of the service account.               |
+| `name`                | The fully-qualified name of the service account.         |
+| `unique_id`           | The unique id of the service account.                    |
+| `private_key`         | The private key that was create for the account.         |
+| `decoded_private_key` | The base64 decoded private key.                          |
+

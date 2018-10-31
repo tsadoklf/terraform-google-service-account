@@ -1,14 +1,17 @@
 # Google Cloud Platform Service Account Terraform Module
-Terraform module for creating a service account in Google Cloud Platform
+Terraform module for creating a service account in Google Cloud Platform. The module supports granting multiple roles to the service account and creating a private key. 
 
 ## Usage
 
 ```ruby
 module "service_account_for_cloud_sql" {
-  source      = "..."
-  account_id  = "my-service-account-for-cloud-sql"
-  desply_name = "my service account for cloud sql"
-  roles       = ["roles/cloudsql.client", "roles/cloudsql.editor"]
+    source      = "..."
+    account_id  = "my-service-account-for-cloud-sql"
+    desply_name = "my service account for cloud sql"
+    roles       = [
+        "roles/cloudsql.client", 
+        "roles/cloudsql.editor"
+    ]
 }
 ```
 

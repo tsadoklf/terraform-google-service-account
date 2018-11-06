@@ -5,13 +5,10 @@ Terraform module for creating a service account in Google Cloud Platform. The mo
 
 ```ruby
 module "service_account_for_cloud_sql" {
-    source      = "git@github.com:tsadoklf/terraform-google-service-account.git?ref=master"
-    account_id  = "my-service-account-for-cloud-sql"
-    desply_name = "my service account for cloud sql"
-    roles       = [
-        "roles/cloudsql.client", 
-        "roles/cloudsql.editor"
-    ]
+    source       = "git@github.com:tsadoklf/terraform-google-service-account.git?ref=master"
+    account_id   = "my-service-account-for-cloud-sql"
+    display_name = "my service account for cloud sql"
+    roles        = ["roles/cloudsql.client", "roles/cloudsql.editor"]
 }
 ```
 
